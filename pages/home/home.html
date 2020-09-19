@@ -1,0 +1,26 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Home</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-card *ngFor="let i of videos">
+		<ion-card-header>
+			<ion-title>{{i.titulo}}</ion-title>
+		</ion-card-header>
+		<div *ngIf="i.src">
+			<video #player playsinline preload="auto">
+				<source [src]="i.src" type="video/mp4">
+			</video>
+      <div class="bar">
+       <button>hola</button>
+      </div>
+		</div>
+		<ion-card-content>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptas accusamus maxime! Nam nobis
+			nulla quis explicabo reiciendis et, at corporis temporibus necessitatibus facilis dolor nihil similique,
+			dolorem cumque quasi?
+		</ion-card-content>
+	</ion-card>
+</ion-content>
